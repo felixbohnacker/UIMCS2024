@@ -1,0 +1,9 @@
+# Given two numbers
+A <- 12
+B <- 18
+
+# Find the GCD
+result <- gcd(A, B)
+
+# Print the result
+print(result)

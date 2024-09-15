@@ -1,0 +1,13 @@
+# Install the gmp package if not already installed
+install.packages("gmp")
+
+# Load the gmp package
+library(gmp)
+
+# Example usage
+A <- 12
+B <- 18
+
+result <- gcd(A, B)
+
+print(result)  # Output: 6

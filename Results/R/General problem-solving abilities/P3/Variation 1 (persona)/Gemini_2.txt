@@ -1,0 +1,17 @@
+find_divisible_by_3 <- function(N) {
+  divisors <- c()
+  for (i in 1:N) {
+    if (N %% i == 0) {
+      divisors <- c(divisors, i)
+    }
+  }
+  
+  count <- 0
+  for (divisor in divisors) {
+    if (divisor %% 3 == 0) {
+      count <- count + 1
+    }
+  }
+  
+  return(count)
+}

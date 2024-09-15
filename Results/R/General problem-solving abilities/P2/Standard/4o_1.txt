@@ -1,0 +1,24 @@
+fibonacci_till_N <- function(N) {
+  # Initialize the first two Fibonacci numbers
+  fib_series <- c(0, 1)
+  
+  # Generate Fibonacci numbers until the last number is less than or equal to N
+  while (TRUE) {
+    next_fib <- sum(tail(fib_series, 2))
+    if (next_fib > N) {
+      break
+    }
+    fib_series <- c(fib_series, next_fib)
+  }
+  
+  # If N is in the series, include it; otherwise, return the series up to the closest smaller number
+  if (N %in% fib_series) {
+    return(fib_series)
+  } else {
+    return(fib_series[-length(fib_series)])  # Remove the last number if it exceeds N
+  }
+}
+
+# Example usage
+N <- 21
+fibonacci_till_N(N)

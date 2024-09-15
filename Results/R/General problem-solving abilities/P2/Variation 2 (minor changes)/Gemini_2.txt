@@ -1,0 +1,21 @@
+fibonacci_series <- function(N) {
+  # Initialize the first two Fibonacci numbers
+  fib <- c(0, 1)
+
+  # Generate the series until the next number exceeds N
+  while (fib[length(fib)] < N) {
+    fib <- c(fib, fib[length(fib) - 1] + fib[length(fib)])
+  }
+
+  # Include N if it's part of the series
+  if (N %in% fib) {
+    fib <- c(fib, N)
+  }
+
+  return(fib)
+}
+
+# Example usage
+N <- 20
+result <- fibonacci_series(N)
+print(result)

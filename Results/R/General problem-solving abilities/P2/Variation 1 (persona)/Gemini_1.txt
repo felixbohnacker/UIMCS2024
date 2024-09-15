@@ -1,0 +1,19 @@
+fibonacci <- function(N) {
+  # Initialize the first two Fibonacci numbers
+  fib_seq <- c(0, 1)
+
+  # Generate the Fibonacci series until the last number is greater than N
+  while (tail(fib_seq, 1) <= N) {
+    # Calculate the next Fibonacci number by adding the previous two
+    next_fib <- sum(tail(fib_seq, 2))
+    fib_seq <- c(fib_seq, next_fib)
+  }
+
+  # Return the Fibonacci series up to N, including N if it's part of the series
+  return(fib_seq[fib_seq <= N])
+}
+
+# Example usage:
+N <- 15
+result <- fibonacci(N)
+print(result)

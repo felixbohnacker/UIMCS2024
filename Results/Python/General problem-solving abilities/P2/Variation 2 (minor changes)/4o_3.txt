@@ -1,0 +1,17 @@
+def fibonacci_series_up_to_n(N):
+    if N <= 0:
+        return []  # Since N is supposed to be positive, we return an empty list for non-positive N.
+    
+    fibonacci_series = []
+    a, b = 0, 1
+    
+    while a <= N:
+        fibonacci_series.append(a)
+        a, b = b, a + b
+    
+    return fibonacci_series
+
+# Example usage:
+N = 21
+result = fibonacci_series_up_to_n(N)
+print(f"The Fibonacci series up to {N} is: {result}")

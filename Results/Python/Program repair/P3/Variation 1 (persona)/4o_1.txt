@@ -1,0 +1,20 @@
+class P3_Python_buggy:
+
+    def find_divisors_divisible_by_3(N):
+        count = 0
+
+        for i in range(1, N + 1):
+            if N % i == 0:  # Fix: change != to == to correctly identify divisors
+                if i % 3 == 0:
+                    count += 1
+
+        return count
+
+    def main():
+        n = 36  # Beispielwert
+        count = P3_Python_buggy.find_divisors_divisible_by_3(n)
+        print(f"Number of divisors of {n} that are divisible by 3: {count}")
+
+
+if __name__ == "__main__":
+    P3_Python_buggy.main()

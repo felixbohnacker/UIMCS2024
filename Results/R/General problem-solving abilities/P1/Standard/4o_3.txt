@@ -1,0 +1,32 @@
+1:
+
+install.packages("pracma")
+library(pracma)
+
+# Example values for A and B
+A <- 56
+B <- 98
+
+# Finding GCD using pracma package
+gcd_result <- gcd(A, B)
+print(paste("The GCD of", A, "and", B, "is", gcd_result))
+
+2:
+
+# Function to calculate GCD using Euclidean algorithm
+find_gcd <- function(A, B) {
+  while (B != 0) {
+    temp <- B
+    B <- A %% B
+    A <- temp
+  }
+  return(A)
+}
+
+# Example values for A and B
+A <- 56
+B <- 98
+
+# Finding GCD using the custom function
+gcd_result <- find_gcd(A, B)
+print(paste("The GCD of", A, "and", B, "is", gcd_result))

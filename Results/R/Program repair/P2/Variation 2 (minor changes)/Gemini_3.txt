@@ -1,0 +1,30 @@
+fibonacci_index <- function(number) {
+  if (number < 0) {
+    stop("Keine gültige Fibonacci-Zahl")
+  }
+
+  index <- 1
+  fib <- 1
+  f1 <- 1
+  f2 <- 0
+
+  while (fib <= number) {
+    if (fib == number) {  # Corrected condition check
+      return(index)
+    }
+    f1 <- fib
+    fib <- f1 + f2
+    f2 <- f1
+    index <- index + 1
+  }
+
+  stop("Keine gültige Fibonacci-Zahl")
+}
+
+number <- as.numeric(readline(prompt = "Bitte geben Sie eine Zahl ein: "))
+tryCatch({
+  index <- fibonacci_index(number)
+  cat("Die Zahl ist Zahl", index, "der Fibonacci-Folge.\n")
+}, error = function(e) {
+  cat(e$message, "\n")
+})

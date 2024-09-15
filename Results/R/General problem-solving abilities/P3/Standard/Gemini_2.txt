@@ -1,0 +1,9 @@
+count_divisible_by_3 <- function(N) {
+  # Find all divisors of N
+  divisors <- c(1:N)[N %% c(1:N) == 0]
+
+  # Count divisors that are divisible by 3
+  count <- sum(divisors %% 3 == 0)
+
+  return(count)
+}

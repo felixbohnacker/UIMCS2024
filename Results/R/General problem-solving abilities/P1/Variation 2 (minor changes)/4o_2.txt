@@ -1,0 +1,17 @@
+# Function to find GCD using the Euclidean algorithm
+gcd <- function(a, b) {
+  while(b != 0) {
+    temp <- b
+    b <- a %% b
+    a <- temp
+  }
+  return(a)
+}
+
+# Example usage
+A <- 56
+B <- 98
+result <- gcd(A, B)
+
+# Output the result
+cat("The GCD of", A, "and", B, "is", result, "\n")

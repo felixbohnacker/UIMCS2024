@@ -1,0 +1,17 @@
+class P1_Python_buggy:
+    def findGCD(A, B):
+        while B != 0:
+            A, B = B, A % B
+        return A
+
+    def main():
+        A = 56
+        B = 98
+
+        gcd = P1_Python_buggy.findGCD(A, B)
+
+        print(f"GCD of {A} and {B} is: {gcd}")
+
+
+if __name__ == "__main__":
+    P1_Python_buggy.main()

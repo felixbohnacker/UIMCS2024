@@ -1,0 +1,34 @@
+class P2_Python_buggy:
+    
+    def fibonacci_index(number):
+        if number < 0:
+            raise ValueError("Keine gültige Fibonacci-Zahl")
+
+        index = 1
+        fib = 1
+        f1 = 1
+        f2 = 0
+
+        while fib <= number:
+            if fib == number:  # Change 1: Use '==' for comparison
+                return index
+
+            f2 = f1  # Change 2: Update f2 before f1
+            f1 = fib  # Change 3: Update f1 before calculating the new fib
+            fib = f1 + f2  # Change 4: Correct Fibonacci calculation
+
+            index += 1
+
+        raise ValueError("Keine gültige Fibonacci-Zahl")
+
+    def main():
+        number = int(input("Bitte geben Sie eine Zahl ein!"))
+
+        try:
+            print(f"Die Zahl ist Zahl {P2_Python_buggy.fibonacci_index(number)} der Fibonacci-Folge.")
+        except ValueError as e:
+            print(e)
+
+
+if __name__ == "__main__":
+    P2_Python_buggy.main()

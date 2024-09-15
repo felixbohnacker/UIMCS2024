@@ -1,0 +1,22 @@
+fibonacci_series <- function(N) {
+  # Initialize the series with the first two terms
+  fib_series <- c(0, 1)
+
+  # Generate the series until the next term exceeds N
+  while (fib_series[length(fib_series)] <= N) {
+    next_term <- fib_series[length(fib_series)] + fib_series[length(fib_series) - 1]
+    fib_series <- c(fib_series, next_term)
+  }
+
+  # If N is in the series, include it
+  if (N %in% fib_series) {
+    fib_series <- c(fib_series, N)
+  }
+
+  return(fib_series)
+}
+
+# Example usage
+N <- 10
+result <- fibonacci_series(N)
+print(result)

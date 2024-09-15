@@ -1,0 +1,37 @@
+1:
+
+install.packages("gmp")
+
+library(gmp)
+
+# Define the two positive integers
+A <- 48
+B <- 18
+
+# Calculate GCD
+gcd_value <- gcd(A, B)
+
+# Print the result
+print(gcd_value)
+
+2:
+
+# Function to calculate GCD using Euclidean algorithm
+gcd_euclidean <- function(A, B) {
+  while (B != 0) {
+    temp <- B
+    B <- A %% B
+    A <- temp
+  }
+  return(A)
+}
+
+# Define the two positive integers
+A <- 48
+B <- 18
+
+# Calculate GCD
+gcd_value <- gcd_euclidean(A, B)
+
+# Print the result
+print(gcd_value)

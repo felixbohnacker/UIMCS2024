@@ -1,0 +1,26 @@
+fibonacci_until_n <- function(N) {
+  # Initialize the first two Fibonacci numbers
+  fib_series <- c(0, 1)
+  
+  # Continue generating the Fibonacci sequence
+  while (TRUE) {
+    # Calculate the next Fibonacci number
+    next_fib <- sum(tail(fib_series, 2))
+    
+    # Stop if the next Fibonacci number exceeds N
+    if (next_fib > N) {
+      break
+    }
+    
+    # Otherwise, add the next number to the series
+    fib_series <- c(fib_series, next_fib)
+  }
+  
+  # Return the Fibonacci series
+  return(fib_series)
+}
+
+# Example usage:
+N <- 8
+result <- fibonacci_until_n(N)
+print(result)

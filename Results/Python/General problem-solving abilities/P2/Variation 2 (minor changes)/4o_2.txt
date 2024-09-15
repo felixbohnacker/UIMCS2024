@@ -1,0 +1,14 @@
+def fibonacci_upto_n(N):
+    fib_series = [0, 1]  # Starting with the first two numbers of the Fibonacci sequence
+    while True:
+        next_fib = fib_series[-1] + fib_series[-2]  # Calculate the next Fibonacci number
+        if next_fib > N:  # If the next Fibonacci number exceeds N, break the loop
+            break
+        fib_series.append(next_fib)  # Otherwise, append the number to the series
+    
+    return fib_series
+
+# Example usage:
+N = 21
+result = fibonacci_upto_n(N)
+print("Fibonacci series up to", N, "is:", result)

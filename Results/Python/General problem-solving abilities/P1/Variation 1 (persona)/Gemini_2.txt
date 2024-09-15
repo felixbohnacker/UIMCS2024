@@ -1,0 +1,20 @@
+def gcd(a, b):
+  """Finds the greatest common divisor (GCD) of two positive integers.
+
+  Args:
+    a: The first positive integer.
+    b: The second positive integer.
+
+  Returns:
+    The greatest common divisor of a and b.
+  """
+
+  while b != 0:
+    a, b = b, a % b
+  return a
+
+# Example usage:
+a = 12
+b = 24
+result = gcd(a, b)
+print("GCD of", a, "and", b, "is:", result)

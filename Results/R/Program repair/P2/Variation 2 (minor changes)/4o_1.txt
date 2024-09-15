@@ -1,0 +1,21 @@
+fibonacci_index <- function(number) {
+  if (number < 0) {
+    stop("Keine gültige Fibonacci-Zahl")
+  }
+  
+  index <- 1
+  f1 <- 0
+  f2 <- 1
+  
+  while (f2 <= number) {
+    if (f2 == number) {
+      return(index)
+    }
+    temp <- f2
+    f2 <- f1 + f2
+    f1 <- temp
+    index <- index + 1
+  }
+  
+  stop("Keine gültige Fibonacci-Zahl")
+}

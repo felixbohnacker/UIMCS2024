@@ -1,0 +1,8 @@
+find_gcd <- function(A, B) {
+  while (B != 0) {
+    temp <- B
+    B <- A %% B
+    A <- temp
+  }
+  return(A)
+}

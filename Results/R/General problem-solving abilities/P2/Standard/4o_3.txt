@@ -1,0 +1,29 @@
+# Function to generate Fibonacci series up to N
+fibonacci_upto_n <- function(N) {
+  if (N < 1) {
+    return("N should be a positive integer")
+  }
+  
+  # Initialize the first two Fibonacci numbers
+  fib_series <- c(0, 1)
+  
+  # Continue adding Fibonacci numbers until the next number exceeds N
+  while (TRUE) {
+    next_fib <- tail(fib_series, 1) + tail(fib_series, 2)[1]
+    
+    if (next_fib > N) {
+      break
+    }
+    
+    fib_series <- c(fib_series, next_fib)
+  }
+  
+  # Remove the initial 0 if the user only expects positive numbers
+  fib_series <- fib_series[fib_series > 0]
+  
+  return(fib_series)
+}
+
+# Example usage:
+N <- 21
+fibonacci_upto_n(N)

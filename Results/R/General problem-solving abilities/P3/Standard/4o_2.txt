@@ -1,0 +1,18 @@
+count_divisors_divisible_by_3 <- function(N) {
+  # Initialize counter for divisors divisible by 3
+  count <- 0
+  
+  # Loop through all possible divisors
+  for (i in 1:N) {
+    if (N %% i == 0 && i %% 3 == 0) {
+      count <- count + 1
+    }
+  }
+  
+  return(count)
+}
+
+# Example usage:
+N <- 36
+result <- count_divisors_divisible_by_3(N)
+print(paste("Number of divisors of", N, "that are divisible by 3:", result))

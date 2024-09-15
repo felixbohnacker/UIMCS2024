@@ -1,0 +1,25 @@
+# Function to calculate the Fibonacci series up to a number N
+fibonacci_series <- function(N) {
+  # Initialize the first two Fibonacci numbers
+  fib <- c(0, 1)
+  
+  # Generate Fibonacci numbers until the next number would exceed N
+  while (TRUE) {
+    next_fib <- sum(tail(fib, 2))
+    if (next_fib > N) {
+      break
+    }
+    fib <- c(fib, next_fib)
+  }
+  
+  # If N is not already in the series, include it
+  if (N > tail(fib, 1)) {
+    fib <- c(fib, N)
+  }
+  
+  return(fib)
+}
+
+# Example usage
+N <- 21
+fibonacci_series(N)

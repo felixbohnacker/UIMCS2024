@@ -1,0 +1,13 @@
+find_gcd <- function(A, B) {
+  while (B != 0) {
+    temp <- B
+    B <- A %% B
+    A <- temp
+  }
+  return(A)  # Add this line to return the GCD
+}
+
+A <- 56
+B <- 98
+gcd <- find_gcd(A, B)
+cat("GCD of", A, "and", B, "is:", gcd, "\n")

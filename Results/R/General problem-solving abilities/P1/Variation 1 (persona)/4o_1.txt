@@ -1,0 +1,15 @@
+# Define the function to calculate GCD
+gcd <- function(A, B) {
+  while (B != 0) {
+    remainder <- A %% B
+    A <- B
+    B <- remainder
+  }
+  return(A)
+}
+
+# Example usage:
+A <- 56
+B <- 98
+result <- gcd(A, B)
+cat("The GCD of", A, "and", B, "is", result, "\n")

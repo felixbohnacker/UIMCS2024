@@ -1,0 +1,5 @@
+count_divisible_by_3 <- function(N) {
+  divisors <- 1:N
+  divisible_by_3 <- divisors[divisors %% 3 == 0]
+  return(length(divisible_by_3))
+}

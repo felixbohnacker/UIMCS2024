@@ -1,0 +1,16 @@
+# Function to calculate GCD
+gcd <- function(A, B) {
+  # Keep looping until B becomes 0
+  while (B != 0) {
+    remainder <- A %% B  # Find the remainder when A is divided by B
+    A <- B               # Update A to the value of B
+    B <- remainder       # Update B to the remainder
+  }
+  return(A)  # When B is 0, A contains the GCD
+}
+
+# Example usage
+A <- 8
+B <- 12
+result <- gcd(A, B)
+cat("The GCD of", A, "and", B, "is:", result, "\n")

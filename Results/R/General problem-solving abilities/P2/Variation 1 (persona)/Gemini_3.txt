@@ -1,0 +1,12 @@
+fibonacci_series <- function(N) {
+  fib_seq <- c(0, 1)
+  while (tail(fib_seq, 1) < N) {
+    fib_seq <- c(fib_seq, sum(tail(fib_seq, 2)))
+  }
+  return(fib_seq[fib_seq <= N])
+}
+
+# Example usage:
+N <- 20
+result <- fibonacci_series(N)
+print(result)

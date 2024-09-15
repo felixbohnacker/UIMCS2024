@@ -1,0 +1,41 @@
+1:
+
+def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+
+# Example usage:
+A = 48
+B = 18
+result = gcd(A, B)
+print(f"The GCD of {A} and {B} is {result}")
+
+2:
+
+def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+
+# Example usage:
+A = 48
+B = 18
+result = gcd(A, B)
+print(f"The GCD of {A} and {B} is {result}")
+
+3:
+
+def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+
+# Example usage:
+A = 48
+B = 18
+result = gcd(A, B)
+print(f"The GCD of {A} and {B} is {result}")
+
+
+

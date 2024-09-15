@@ -1,0 +1,15 @@
+# Function to calculate the Greatest Common Divisor (GCD) using Euclid's algorithm
+gcd <- function(a, b) {
+  while (b != 0) {
+    temp <- a %% b
+    a <- b
+    b <- temp
+  }
+  return(a)
+}
+
+# Example usage
+A <- 12
+B <- 18
+result <- gcd(A, B)
+print(result)  # Output: 6

@@ -1,0 +1,25 @@
+def fibonacci_series(N):
+  """Calculates the Fibonacci series up to N.
+
+  Args:
+    N: A positive integer.
+
+  Returns:
+    A list containing the Fibonacci numbers up to N.
+  """
+
+  fib_series = [0, 1]  # Initialize the series with the first two terms
+  while fib_series[-1] <= N:
+    next_fib = fib_series[-1] + fib_series[-2]
+    fib_series.append(next_fib)
+
+  return fib_series
+
+# Get the input from the user
+N = int(input("Enter a positive integer: "))
+
+# Calculate the Fibonacci series up to N
+result = fibonacci_series(N)
+
+# Print the result
+print("Fibonacci series up to", N, ":", result)

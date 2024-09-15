@@ -1,0 +1,10 @@
+def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+
+# Example usage:
+A = 8
+B = 12
+result = gcd(A, B)
+print("The GCD of", A, "and", B, "is:", result)

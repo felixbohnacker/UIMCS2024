@@ -1,0 +1,7 @@
+# Example usage:
+a <- 12
+b <- 18
+
+gcd_result <- gcd(a, b)
+
+print(gcd_result)  # Output: 6

@@ -1,0 +1,9 @@
+class P1_Python_buggy:
+    def findGCD(A, B):
+        while B != 0:
+            temp = B
+            B = A % B
+            A = temp
+        return A
+
+    # ... rest of the code remains unchanged ...

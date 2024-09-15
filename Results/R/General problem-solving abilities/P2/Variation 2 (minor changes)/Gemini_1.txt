@@ -1,0 +1,16 @@
+fibonacci_series <- function(N) {
+  # Initialize the first two Fibonacci numbers
+  fib <- c(0, 1)
+  
+  # Generate the series until the next number exceeds N
+  while (tail(fib, 1) <= N) {
+    fib <- c(fib, sum(tail(fib, 2)))
+  }
+  
+  # Remove the last element if it's greater than N
+  if (tail(fib, 1) > N) {
+    fib <- fib[-length(fib)]
+  }
+  
+  return(fib)
+}
