@@ -5,6 +5,7 @@ This repository contains resources for evaluating programming solutions in Pytho
 - The **`Code examples`** folder contains working and buggy code used for Scenario 2 and Scenario 4.
 - The **`Results`** folder includes subfolders for each programming language, scenario, and problem, with associated outputs and evaluation data.
 - The root directory contains the **`Problems_Scenarios_EvaluationCriteria.xlsx`** file, which provides an overview of prompts, evaluation criteria, and key project aspects.
+- The file **`Aggregated_Results.xlsx`**, also stored in the root directory, contains aggregated average scores across the different scenarios.
 
 ## Authors
 - **Niklas Staber**  
